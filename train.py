@@ -95,8 +95,6 @@ class MyDataset(Dataset):
                     self.W.append(adj)
                     self.Y.append(self.df['measurement_value'][i])
                     self.Z.append(atoms)
-            if i > 1:
-                break
     def pad(self, x):
         shape = np.shape(x)
         padded_array = np.zeros((self.maxAtoms, self.maxAtoms))
